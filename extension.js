@@ -102,7 +102,7 @@ class ScaleToggle extends QuickMenuToggle {
         }
 
         const main = groups.find(g => g.primary) ?? groups[0];
-        const subtitle = main ? formatScale(main.current) : null;
+        const subtitle = main ? formatScale(main.current) : '';
         this.subtitle = subtitle;
         this.menu.setHeader(ICON, TITLE, subtitle);
         this.visible = groups.length > 0;
