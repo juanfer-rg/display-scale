@@ -1,0 +1,14 @@
+{
+  "name": "display-scale",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Development tooling for the Display Scale GNOME Shell extension (not shipped).",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint extension.js displayConfig.js tests"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0"
+  }
+}

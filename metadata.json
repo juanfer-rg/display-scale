@@ -1,0 +1,8 @@
+{
+  "uuid": "display-scale@juanfer-rg.github.io",
+  "name": "Display Scale",
+  "description": "Change the display scale from Quick Settings.\n\nAdds a Scale menu with the same scales as Settings → Displays for the current resolution (100 %, 125 %, 150 %…). With several monitors, each one gets its own list.",
+  "shell-version": ["46", "47", "48", "49", "50"],
+  "url": "https://github.com/juanfer-rg/display-scale",
+  "version-name": "1.0.0"
+}
