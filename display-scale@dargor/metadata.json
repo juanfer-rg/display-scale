@@ -1,0 +1,7 @@
+{
+  "uuid": "display-scale@dargor",
+  "name": "Display Scale",
+  "description": "Adds a Scale menu to Quick Settings with the display scales supported by the current mode.",
+  "shell-version": ["46", "47", "48", "49", "50"],
+  "version": 1
+}
