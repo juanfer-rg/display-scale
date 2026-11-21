@@ -36,12 +36,19 @@ class ScaleToggle extends QuickMenuToggle {
         this.connect('clicked', () => this.menu.open());
 
         this._unsubscribe = subscribeMonitorsChanged(() => this._sync());
-        this.connect('destroy', () => {
-            this._cancellable.cancel();
-            this._unsubscribe();
-        });
 
         this._sync();
+    }
+
+    destroy() {
+        this._cancellable.cancel();
+        this._cancellable = null;
+        this._unsubscribe();
+        this._unsubscribe = null;
+        this._section.destroy();
+        this._section = null;
+        this._state = null;
+        super.destroy();
     }
 
     async _sync() {
@@ -54,7 +61,7 @@ class ScaleToggle extends QuickMenuToggle {
                 console.error(`[display-scale] GetCurrentState: ${e.message}`);
             return;
         }
-        if (id !== this._syncId)
+        if (id !== this._syncId || !this._section)
             return;
         this._state = state;
         this._rebuild();
